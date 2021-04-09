@@ -16,11 +16,11 @@ const ShowPage = (props) => {
   return (
     <div className={classes.main}>
       <div className={classes.imgBlock}>
-        <img src={show?.image.medium} alt="no_photo" />
+        <img src={show?.image?.medium} alt="no_photo" />
       </div>
       <div className={classes.showBlock}>
         <h2> {show?.name}</h2>
-        <p>{show?.summary.replace(pattern, "")}</p>
+        <p>{show?.summary?.replace(pattern, "")}</p>
       </div>
     </div>
   );
