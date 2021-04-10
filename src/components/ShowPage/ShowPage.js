@@ -6,7 +6,11 @@ import { getShow } from "../../redux/showsActonCreators";
 const ShowPage = (props) => {
   const dispatch = useDispatch();
   const { show } = useSelector((state) => state.showsReduser);
+
+
   // let pattern = /(<([^>]+)>)/gi;
+  //   let pattern = /(<([^>]+)>)/gi;
+
 
   useEffect(() => {
     const showId = props.match.params.id;
