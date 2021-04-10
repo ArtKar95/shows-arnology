@@ -6,7 +6,7 @@ import { getShow } from "../../redux/showsActonCreators";
 const ShowPage = (props) => {
   const dispatch = useDispatch();
   const { show } = useSelector((state) => state.showsReduser);
-  let pattern = /(<([^>]+)>)/gi;
+  // let pattern = /(<([^>]+)>)/gi;
 
   useEffect(() => {
     const showId = props.match.params.id;
@@ -20,7 +20,8 @@ const ShowPage = (props) => {
       </div>
       <div className={classes.showBlock}>
         <h2> {show?.name}</h2>
-        <p>{show?.summary?.replace(pattern, "")}</p>
+        {/* <p>{show?.summary?.replace(pattern, "")}</p> */}
+        <div dangerouslySetInnerHTML={{ __html: show?.summary }} />
       </div>
     </div>
   );
